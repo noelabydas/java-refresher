@@ -11,8 +11,10 @@
     boolean empty(){
         if(top<0){
             System.out.println("Stack Underflow");
+            return true;
         }
         return false;
+        
     }
 
     void push(int x){
