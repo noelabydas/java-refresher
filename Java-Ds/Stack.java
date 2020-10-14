@@ -1,30 +1,27 @@
-import java.util.Scanner;  
-class Stack   
+ class Stack   
 {  
     int max=100;
     int top;
     int a[]=new int[max];
 
-    int empty(){
-        if(top<0){
-            System.out.println("Stack Underflow");
-        }
-        return 0;
-    }
-
     Stack(){
         top=-1;
     }
 
-    int push(int x){
+    boolean empty(){
+        if(top<0){
+            System.out.println("Stack Underflow");
+        }
+        return false;
+    }
+
+    void push(int x){
         if (top>=(max-1)){
             System.out.println("Stack overflow");
-            return 0;
         }
         else{
             a[++top]=x;
             System.out.println(x+"is pushed into the stack");
-            return 1;
         }
     }
 
@@ -48,7 +45,7 @@ class Stack
         } 
         else { 
             int x = a[top]; 
-            System.out.println(x+"is at the top of the stack")
+            System.out.println(x+"is at the top of the stack");
             return x; 
         } 
     }
@@ -56,11 +53,12 @@ class Stack
     public static void main(String args[]) 
     { 
         Stack s = new Stack(); 
-        s.push(10); 
-        s.push(20); 
+        s.push(70); 
         s.push(30); 
+        s.push(90); 
         s.peek();
         s.pop(); 
+      	s.peek();
     } 
 }
 

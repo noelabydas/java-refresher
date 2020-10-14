@@ -1,5 +1,5 @@
 class Queue{
-    static int front,rear,capacity,queue[];
+    int front,rear,capacity,queue[];
 
     Queue(int c){
         front=rear=0;
@@ -18,7 +18,7 @@ class Queue{
         }
     }
 
-    static void dequeue(){
+    void dequeue(){
         if(front==rear){
             System.out.println("Queue is empty\n");
         }
@@ -39,7 +39,7 @@ class Queue{
         }
     }
     
-    static void displayFront() 
+    void displayFront() 
     { 
         if (front == rear) { 
             System.out.printf(" Queue is empty\n"); 
@@ -51,10 +51,10 @@ class Queue{
         Queue q = new Queue(5); 
         System.out.println("\n Initial Queue:");
         q.display(); 
+        q.enqueue(40); 
+        q.enqueue(60); 
         q.enqueue(10); 
-        q.enqueue(30); 
-        q.enqueue(50); 
-        q.enqueue(70); 
+        q.enqueue(20); 
 
         System.out.println("\n Queue after enqueue eperation:");
         q.display(); 
